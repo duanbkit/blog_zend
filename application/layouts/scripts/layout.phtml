@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="Petit blog pour m'initier à PHP">
+    <meta name="author" content="Jean-philippe Lannoy">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link href="<?= $this->baseUrl() ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?= $this->baseUrl() ?>/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  
+    <div class="container">
+
+      <div class="content">
+      
+        <div class="page-header">
+          <h1>Mon Blog <small>Pour m'initier à PHP</small></h1>
+        </div>
+        
+        <div class="row">
+        
+          <div class="span14 last">
+          </div>
+        
+          <div class="span10">
+			<?php echo $this->layout()->content; ?>
+		  </div>
+			﻿<nav class="span4">
+			<h2>Menu</h2>   
+			<form action="index.php" method="get">
+				Recherche:<br>
+				<input type="text" name="r" placeholder="Informatique, ubuntu ..." value="" class="span3">&nbsp;<input type="submit" value="OK" class="btn">
+			</form>
+			<ul>
+				<li><a href="/">Accueil</a></li>               
+					<li><a href="/article/editer">Rédiger un article</a></li>
+					<li><a href="#">Déconnexion</a></li>            
+					<li><a href="#">Connexion</a></li>
+			</ul>
+			</nav>	
+        </div>
+        
+      </div>
+
+      <footer>
+        <p>Nilsine 2011</p>
+
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+			

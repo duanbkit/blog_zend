@@ -1,0 +1,7 @@
+<h3><?php echo $this->titre; ?></h3>
+<p><?php echo $this->texte; ?></p>
+Rédigé le <?php echo date('d/m/Y',$this->date)." à ".date('H:i:s',$this->date); ?>
+<br>
+
+<a href="<?php echo $this->url(array('controller'=>'article', 'action'=>'editer', 'id'=>$this->id_article));?>" class="btn primary">Modifier</a>
+<a href="<?php echo $this->url(array('controller'=>'article', 'action'=>'supprimer', 'id'=>$this->id_article));?>" class="btn danger">Supprimer</a>

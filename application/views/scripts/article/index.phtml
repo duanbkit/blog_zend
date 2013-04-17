@@ -1,0 +1,16 @@
+<?php
+echo $this->nbpages;
+if(isset($this->message)){
+
+	foreach($this->message as $message){
+		echo '<div class="btn primary">'.$message.'</div>'; 
+	}
+}
+
+echo $this->partialLoop('article/_article.phtml',$this->articles);
+/*var_dump($this->paginator);
+echo $this->partialLoop('_paginator.phtml',$this->paginator);
+*/
+echo $this->paginationControl($this->paginator,
+                  'Elastic',            // le comportement
+                  '_paginator.phtml');    // le partiel de vue
